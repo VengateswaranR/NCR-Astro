@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+         <link rel="stylesheet" href="Home.css">
+    <title>N.C.R Astro</title>
+
+  </head>
+
+  <body class="bg">
+    <div class="head">N.C.R Astro Research Centre</div>
+<div class="grid-container">
+
+
+
+
+
+
+<div class="main">
+  <div class="tab">
+
+    <button class="tablinks" onclick="opentab(event, 'Numerology')"><img class="imgicon" src="numerology icon.jpg" ><label class="tab label">எண் கணிதம்</label></button>
+    <button class="tablinks" onclick="opentab(event, 'kuligal')"><img class="imgicon" src="vastu icon.jpg" ><label class="tab label">குழி கணிதம்</label></button>
+    <button class="tablinks" onclick="opentab(event, 'prasanam'), kadigaraprasanam()"><img class="imgicon" src="clock icon.png" ><label class="tab label">கடிகார பிராசனம்</label></button>
+  </div>
+
+
+
+
+
+
+  <div id="Numerology" class="tabcontent">
+    <table class="numtable">
+      <tr >
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>U</td>
+        <td>O</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>I</td>
+        <td>K</td>
+        <td>G</td>
+        <td>M</td>
+        <td>H</td>
+        <td>V</td>
+        <td>Z</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>J</td>
+        <td>R</td>
+        <td>L</td>
+        <td>T</td>
+        <td>N</td>
+        <td>W</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td></td>
+        <td>S</td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <input type="text" class="numinput" id="name"  placeholder="Enter Your Name" required>
+    <div class="cont">
+        <button type="button" class="kkbut" onclick="numer()">calculate</button>
+        </div>
+        <p id="total" class="numer-font"></p>
+  </div>
+
+
+
+<div id="kuligal" class="tabcontent">
+  <table class="tablec">
+    <tr>
+      <td><label for="len"><b>Length</b></label></td>
+      <td><input type="number" class="kkinput"id="len-ft" placeholder="feet" required></td>
+      <td><input type="number" class="kkinput" id="len-inch" placeholder="inch" required></td>
+    </tr>
+
+    <tr>
+      <td><label for="wid"><b>Width</b></label></td>
+      <td><input type="number" class="kkinput" id="wid-ft"  placeholder="feet"  required></td>
+      <td><input type="number" class="kkinput" id="wid-inch" placeholder="inch"  required></td>
+    </tr>
+
+  </table>
+
+
+  <div class="cont">
+      <button type="button" class="kkbut" onclick="kulikanitham()">SUBMIT</button>
+      </div>
+      <table class="numtable">
+        <tr>
+          <td class="numtableval">குழி எண்</td>
+          <td class="numtableval"><p id="kuliss"></p></td>
+        </tr>
+        <tr >
+          <td class="numtableval">கற்ப பொருத்தம்</td>
+          <td class="numtableval"><p id="karupam"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">ஆதாயப் பொருத்தம்</td>
+          <td class="numtableval"><p id="varavu"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">விரயப் பொருத்தம்</td>
+          <td class="numtableval"><p id="selavu"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">யோனி பொருத்தம்</td>
+          <td class="numtableval"><p id="yoni"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">நட்சத்திர பொருத்தம்</td>
+          <td class="numtableval"><p id="nakstram"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">வாரப் பொருத்தம்</td>
+          <td class="numtableval"><p id="varam"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">அம்ச பொருத்தம்</td>
+          <td class="numtableval"><p id="amsam"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">வம்ச பொருத்தம்</td>
+          <td class="numtableval"><p id="vamsam"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">திதி பொருத்தம்</td>
+          <td class="numtableval"><p id="thiti"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">ராசி பொருத்தம்</td>
+          <td class="numtableval"><p id="rasi"></p></td>
+        </tr>
+        <tr>
+          <td class="numtableval">வயது பொருத்தம்</td>
+          <td class="numtableval"><p id="age"></p></td>
+        </tr>
+      </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="prasanam" class="tabcontent">
+  <input type="time" class="prasanam-time" id="time">
+  
+  <div class="cont">
+    <button type="button" class="kkbut" onclick="kadigaraprasanam()">calculate</button>
+    </div>
+  <table class="kadigaram">
+    <tr>
+      <td class="kadigaram-subs"><div id="meenam"></td>
+      <td class="kadigaram-subs"><div id="mesham"></div></td>
+      <td class="kadigaram-subs"><div id="rishabam"></td>
+      <td class="kadigaram-subs"><div id="midhunam"></td>
+    </tr>
+    <tr>
+      <td class="kadigaram-subs"><div id="kumbam"></td>
+          <td colspan="2"><div class="ktime" id="date"></td>
+      <td class="kadigaram-subs"><div id="kadagam"></td>
+    </tr>
+    <tr>
+      <td class="kadigaram-subs"><div id="magaram"></td>
+        <td colspan="2"></td>
+      <td class="kadigaram-subs"><div id="simam"></td>
+    </tr>
+    <tr>
+      <td class="kadigaram-subs"><div id="dhanush"></td>
+      <td class="kadigaram-subs"><div id="viruchigam"></td>
+      <td class="kadigaram-subs"><div id="thulam"></td>
+      <td class="kadigaram-subs"><div id="kani"></td>
+    </tr>
+  </table>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!--https://jsfiddle.net/dimshik/9DbEP/4/   to print pdf-->
+
+
+
+  <div class="photo"><img class="imgcenter" src="ncr.jpg" width="200" height="350"></div>
+</div>
+  <script src="Home.js"> </script>
+  </body>
+
+</html>
