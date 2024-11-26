@@ -1,0 +1,203 @@
+.bg{
+  background: aliceblue;
+}
+.head { grid-area: header;
+background-color: yellow;
+color: red;
+font-size:-webkit-xxx-large;
+text-align: center;
+margin:auto;
+}
+.photo { grid-area: right; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+    'header   header'
+    'main   right';
+  gap: 10px;
+  padding: 10px;
+}
+.imgicon{
+  display: block;
+  border-radius: 50%;
+  width: 100%
+}
+
+.imgcenter {
+display: block;
+border-radius: 50%;
+margin-left: auto;
+}
+
+
+
+
+.main{grid-area: main;}
+.numinput{
+  margin: auto;
+  margin-top: 5%;
+  padding: 12px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.numtable{
+  border: 1px solid;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  margin-top: 5%;
+}
+.numer-font{
+  font-size: 140%;
+  text-align: center;
+}
+.numtableval{
+  border: 1px solid red;
+}
+
+
+
+
+
+
+.tablec{
+  font-size: -webkit-xxx-large;
+  width: 80%;
+  margin: auto;
+}
+.kkinput{
+
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+.cont {
+  height: 100px;
+  position: relative;
+}
+
+.kkbut{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.kkbut:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #b931c4;
+;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  width: 12%;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+color:red;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tab label{
+  font-size: 15px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ktime{
+  text-align: center;
+}
+.kadigaram{
+ border:1px solid black;
+ border-collapse: collapse;
+ height: 500px;
+ width:500px;
+ margin:auto;
+ grid-area: right;
+}
+
+.kadigaram-subs{
+ border:1px solid black;
+ width:25%;
+ text-align: center;
+ height: 25%;
+ margin:auto;
+}
+
+.prasanam-time{
+  margin: auto;
+  margin-top: 5%;
+  padding: 12px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
