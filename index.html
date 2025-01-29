@@ -22,10 +22,36 @@
     <button class="tablinks" onclick="opentab(event, 'Numerology')"><img class="imgicon" src="numerology icon.jpg" ><label class="tab label">எண் கணிதம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'kuligal')"><img class="imgicon" src="vastu icon.jpg" ><label class="tab label">குழி கணிதம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'prasanam'), kadigaraprasanam()"><img class="imgicon" src="clock icon.png" ><label class="tab label">கடிகார பிராசனம்</label></button>
+    <button class="tablinks" onclick="opentab(event, 'naligai'), naligai()"><img class="imgicon" src="clock icon.png" ><label class="tab label">நாழிகை கணிதம்</label></button>
+  
   </div>
 
 
 
+
+
+  <div id="naligai" class="tabcontent">
+  <table class="tablec">
+    <tr>
+      <td><label for="start_time" class="naligai_fsize"><b>தொடக்க தேதி மற்றும் நேரம்</b></label></td>
+      <td><input type="date" class="prasanam-time" id="date1"></td>
+      <td><input type="time" class="prasanam-time" id="time1"></td>
+    </tr>
+
+    <tr>
+      <td><label for="end_time" class="naligai_fsize"><b>முடிவு தேதி மற்றும் நேரம்</b></label></td>
+      <td><input type="date" class="prasanam-time" id="date2"></td>
+      <td><input type="time" class="prasanam-time" id="time2"></td>
+    </tr>
+
+  </table>
+  <div class="cont">
+    <button type="button" class="kkbut" onclick="nalgai()">calculate</button>
+    </div>
+  <p id="totl"></p>
+  <p id="totlh"></p>
+  
+</div>
 
 
 
