@@ -201,3 +201,8 @@ color:red;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
+/*naligai font*/
+.naligai_fsize{
+  font-size: medium;
+}
