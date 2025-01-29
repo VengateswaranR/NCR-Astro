@@ -95,6 +95,28 @@ function opentab(evt, tabName) {
 }
 
 
+function nalgai(){
+  date1=document.getElementById('date1').value
+  a_date=date1.split("-")
+  time1=document.getElementById('time1').value
+  a_time=time1.split(":")
+
+  date2=document.getElementById('date2').value
+  b_date=date2.split("-")
+  time2=document.getElementById('time2').value
+  b_time=time2.split(":")
+
+  var endTime = new Date(parseInt(a_date[0]),parseInt(a_date[1]),parseInt(a_date[2]),parseInt(a_time[0]),parseInt(a_time[1])) / 1000;
+  var elapsed = new Date(parseInt(b_date[0]),parseInt(b_date[1]),parseInt(b_date[2]),parseInt(b_time[0]),parseInt(b_time[1])) / 1000;
+  var totalTime =  (elapsed-endTime)/60;
+  var total_hours= parseInt(totalTime/60);
+  var total_Min= parseInt(totalTime%60);
+  var naali= parseInt(totalTime/24);
+  var vinadi= parseInt((parseInt(totalTime%24)*60)/24);
+  document.getElementById('totl').innerHTML =  "total time(HH-MM):  "+parseInt(total_hours)+"-"+parseInt(total_Min)
+  document.getElementById('totlh').innerHTML =  "மொத்த நேரம்(நாழிகை-வினாடி):  "+parseInt(naali)+"-"+parseInt(vinadi)
+
+}
 
 
 function numer(){
