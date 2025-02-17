@@ -191,6 +191,77 @@ else{
     document.getElementById(udhayam[minutes]).innerHTML = "உ"+"<br>"+"ஆ";
   } 
   }
+function thiyagium(){
+  adi_andam=document.getElementById('aadi_andam').value
+  nali=adi_andam.split('-')
+  if(nali[0]!=""){
+  if(nali.length==2){
+  vinadi=(parseInt(nali[0])*60)+parseInt(nali[1])
+  }
+  else{
+    vinadi=(parseInt(nali[0])*60)
+  }
+}
+else{
+  vinadi=0
+}
+  nakshatra=document.getElementById('naksatram').value
+  const nakshra=['அசுவினி','பரணி','கிருத்திகை','ரோகிணி','மிருகசீரிடம்','திருவாதிரை','புனர்பூசம்','பூசம்','ஆயில்யம்',
+    'மகம்','பூரம்','உத்திரம்','ஹஸ்தம்','சித்திரை','சுவாதி','விசாகம்','அனுஷம்','கேட்டை',
+    'மூலம்','பூராடம்','உத்திராடம்','திருவோணம்','அவிட்டம்','சதயம்','பூரட்டாதி','உத்திரட்டாதி','ரேவதி']
+    for(i=0;i<nakshra.length;i++){
+      if(nakshra[i]==nakshatra){
+        thiyagium_time=['5-6','2-5','1-2','2-3','7-30','7-20','1-2','1-3','8-15',
+          '1-2','1-3','3-10','11-30','14-15','7-30','7-30','1-6','7-30',
+          '1-3','2-5','1-3','1-6','1-6','3-10','4-15','2-5','1-2']
+        visha_kalam=thiyagium_time[i].split('-')
+        time=(vinadi/parseInt(visha_kalam[1]))*parseInt(visha_kalam[0])
+        t_naligai=parseInt(time/60)
+        t_vinadi=parseInt(time)%60
+        document.getElementById('thiyagium_start').innerHTML =  "தியாஜ்ஜியம் ஆரம்ப காலம்: "+t_naligai+"-"+t_vinadi
+        document.getElementById('thiyagium_end').innerHTML =  "தியாஜ்ஜியம் முடிவு காலம்: "+(t_naligai+4)+"-"+t_vinadi
+      break
+      }
+
+      }
+}
+
+
+
+
+
+function thiti_thiyagium(){
+  adi_andam=document.getElementById('tt-aadi_andam').value
+  nali=adi_andam.split('-')
+  if(nali[0]!=""){
+  if(nali.length==2){
+  vinadi=(parseInt(nali[0])*60)+parseInt(nali[1])
+  }
+  else{
+    vinadi=(parseInt(nali[0])*60)
+  }
+}
+else{
+  vinadi=0
+} 
+      thithi=document.getElementById('thiti').value
+      const thiti=['பிரதமை','துவிதியை','திருதியை','சதுர்த்தி','பஞ்சமி','சஷ்டி',
+        'சப்தமி','அஷ்டமி','நவமி','தசமி','ஏகாதசி','துவாதசி','திரயோதசி','சதுர்த்தசி','பௌர்ணமி','அமாவாசை']
+        for(i=0;i<thiti.length;i++){
+          if(thiti[i]==thithi){
+            thiyagium_time=['2-5','1-5','11-12','1-12','9-10','9-10','31-60','1-3',
+              '1-2','11-20','1-60','1-4','13-30','7-60','29-60','1-10']
+            visha_kalam=thiyagium_time[i].split('-')
+            time=(vinadi/parseInt(visha_kalam[1]))*parseInt(visha_kalam[0])
+            t_naligai=parseInt(time/60)
+            t_vinadi=parseInt(time)%60
+            document.getElementById('tt_thiyagium_start').innerHTML =  "தியாஜ்ஜியம் ஆரம்ப காலம்: "+t_naligai+"-"+t_vinadi
+            document.getElementById('tt_thiyagium_end').innerHTML =  "தியாஜ்ஜியம் முடிவு காலம்: "+(t_naligai+4)+"-"+t_vinadi
+          break
+          }
+    
+          }
+}
 
 
 /*
