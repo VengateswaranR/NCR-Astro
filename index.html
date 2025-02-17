@@ -23,9 +23,96 @@
     <button class="tablinks" onclick="opentab(event, 'kuligal')"><img class="imgicon" src="vastu icon.jpg" ><label class="tab label">குழி கணிதம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'prasanam'), kadigaraprasanam()"><img class="imgicon" src="clock icon.png" ><label class="tab label">கடிகார பிராசனம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'naligai'), naligai()"><img class="imgicon" src="clock icon.png" ><label class="tab label">நாழிகை கணிதம்</label></button>
-  
+    <button class="tablinks" onclick="opentab(event, 'thiyagium'), thiyagium()"><img class="imgicon" src="star.jpg" ><label class="tab label">நட்சத்திர தியாஜ்ஜியம்</label></button>
+    <button class="tablinks" onclick="opentab(event, 'thiti_thiyagium'), thiti_thiyagium()"><img class="imgicon" src="moon.jpg" ><label class="tab label">திதி தியாஜ்ஜியம்</label></button>
+ 
   </div>
 
+
+<div id="thiyagium" class="tabcontent">
+    <table class="tablec">
+      <tr>
+        <td><label for="start_time" class="naligai_fsize"><b>ஆதி அந்தபரமா நாளிகை</b></label></td>
+        <td><input class="prasanam-time" id="aadi_andam"></td>
+      </tr>
+      
+      <tr>
+        <td><label for="end_time" class="naligai_fsize"><b>நட்சத்திரம்</b></label></td>  
+        <td><select id="naksatram"class="thiyagium_naksatra"  >
+          <option  value="அசுவினி">அசுவினி</option>
+          <option  value="பரணி">பரணி</option>
+          <option  value="கிருத்திகை">கிருத்திகை</option>
+          <option  value="ரோகிணி">ரோகிணி</option>
+          <option  value="மிருகசீரிடம்">மிருகசீரிடம்</option>
+          <option  value="திருவாதிரை">திருவாதிரை</option>
+          <option  value="புனர்பூசம்">புனர்பூசம்</option>
+          <option  value="பூசம்">பூசம்</option>
+          <option  value="ஆயில்யம்">ஆயில்யம்</option>
+          <option  value="மகம்">மகம்</option>
+          <option  value="பூரம்">பூரம்</option>
+          <option  value="உத்திரம்">உத்திரம்</option>
+          <option  value="ஹஸ்தம்">ஹஸ்தம்</option>
+          <option  value="சித்திரை">சித்திரை</option>
+          <option  value="சுவாதி">சுவாதி</option>
+          <option  value="விசாகம்">விசாகம்</option>
+          <option  value="அனுஷம்">அனுஷம்</option>
+          <option  value="கேட்டை">கேட்டை</option>
+          <option  value="மூலம்">மூலம்</option>
+          <option  value="பூராடம்">பூராடம்</option>
+          <option  value="உத்திராடம்">உத்திராடம்</option>
+          <option  value="திருவோணம்">திருவோணம்</option>
+          <option  value="அவிட்டம்">அவிட்டம்</option>
+          <option  value="சதயம்">சதயம்</option>
+          <option  value="பூரட்டாதி">பூரட்டாதி</option>
+          <option  value="உத்திரட்டாதி">உத்திரட்டாதி</option>
+          <option  value="ரேவதி">ரேவதி</option>
+        </td>
+      </tr>
+    </table>
+    <div class="cont">
+      <button type="button" class="kkbut" onclick="thiyagium()">calculate</button>
+      </div>
+    <p id="thiyagium_start"></p>
+    <p id="thiyagium_end"></p> 
+  </div>
+
+
+
+  <div id="thiti_thiyagium" class="tabcontent">
+    <table class="tablec">
+      <tr>
+        <td><label for="start_time" class="naligai_fsize"><b>ஆதி அந்தபரமா நாளிகை</b></label></td>
+        <td><input class="prasanam-time" id="tt-aadi_andam"></td>
+      </tr>
+  
+      <tr>
+        <td><label for="end_time" class="naligai_fsize"><b>திதி</b></label></td>
+        <td><select id="thiti"class="thiyagium_naksatra"  >
+          <option  value="பிரதமை">பிரதமை</option>
+          <option  value="துவிதியை">துவிதியை</option>
+          <option  value="திருதியை">திருதியை</option>
+          <option  value="சதுர்த்தி">சதுர்த்தி</option>
+          <option  value="பஞ்சமி">பஞ்சமி</option>
+          <option  value="சஷ்டி">சஷ்டி</option>
+          <option  value="சப்தமி">சப்தமி</option>
+          <option  value="அஷ்டமி">அஷ்டமி</option>
+          <option  value="நவமி">நவமி</option>
+          <option  value="தசமி">தசமி</option>
+          <option  value="ஏகாதசி">ஏகாதசி</option>
+          <option  value="துவாதசி">துவாதசி</option>
+          <option  value="திரயோதசி">திரயோதசி</option>
+          <option  value="சதுர்த்தசி">சதுர்த்தசி</option>
+          <option  value="பௌர்ணமி">பௌர்ணமி</option>
+          <option  value="அமாவாசை">அமாவாசை</option>
+          </td>     
+      </tr>  
+    </table>
+    <div class="cont">
+      <button type="button" class="kkbut" onclick="thiti_thiyagium()">calculate</button>
+      </div>
+    <p id="tt_thiyagium_start"></p>
+    <p id="tt_thiyagium_end"></p>    
+  </div>
 
 
 
