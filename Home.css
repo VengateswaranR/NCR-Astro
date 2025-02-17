@@ -104,6 +104,15 @@ margin-left: auto;
 
 
 
+.thiyagium_naksatra{
+  width: 65%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 12px 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 
 
