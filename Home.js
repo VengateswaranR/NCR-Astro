@@ -56,7 +56,7 @@ function kulikanitham(){
     var kuli_thiti=(parseInt(kuli)*9)%15;
     const thiti=['அமாவாசை/பௌர்ணமி','பிரதமை','துவிதியை','திருதியை','சதுர்த்தி','பஞ்சமி','சஷ்டி',
                 'சப்தமி','அஷ்டமி','நவமி','தசமி','ஏகாதசி','துவாதசி','திரயோதசி','சதுர்த்தசி']
-    document.getElementById('thiti').innerHTML = thiti[kuli_thiti];
+    document.getElementById('k_thiti').innerHTML = thiti[kuli_thiti];
     
         
     var kuli_vamsam=(parseInt(kuli))%4;
