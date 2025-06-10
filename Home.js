@@ -262,6 +262,43 @@ else{
     
           }
 }
+function karma_naKshatra(){
+    const nakshra=['அசுவினி','பரணி','கிருத்திகை','ரோகிணி','மிருகசீரிடம்','திருவாதிரை','புனர்பூசம்','பூசம்','ஆயில்யம்',
+      'மகம்','பூரம்','உத்திரம்','ஹஸ்தம்','சித்திரை','சுவாதி','விசாகம்','அனுஷம்','கேட்டை',
+      'மூலம்','பூராடம்','உத்திராடம்','திருவோணம்','அவிட்டம்','சதயம்','பூரட்டாதி','உத்திரட்டாதி','ரேவதி']
+      
+      const rasi=['மேஷம்','ரிஷபம்','மிதுனம்','கடகம்','சிம்மம்','கன்னி','துலாம்','விருச்சிகம்','தனுசு','மகரம்','கும்பம்','மீனம்']
+   
+      rasi1=document.getElementById('rasi1').value
+      rasi2=document.getElementById('rasi2').value
+
+
+      for (i = 0; i < rasi.length; i++) {
+        if(rasi1==rasi[i]){
+          rahu_rasi_pos=i*30*60;
+          break;
+        }
+      }
+      for (i = 0; i < rasi.length; i++) {
+        if(rasi2==rasi[i]){
+          chandra_rasi_pos=i*30*60;
+          break;
+        }
+      }
+    rahu=document.getElementById('ktext1').value
+    rahuspudam=rahu.split("-")
+    chandran=document.getElementById('ktext2').value
+    chandraspudam=chandran.split("-")
+
+    karmanakshatra= (chandra_rasi_pos+(parseInt(chandraspudam[0])*60+parseInt(chandraspudam[1])))-(rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))
+    if(karmanakshatra>0){
+      a= parseInt(((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(karmanakshatra/2))/800);
+    }
+    else{
+      a=parseInt(((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(21600+karmanakshatra)/2)/800)
+    }
+    document.getElementById('Karmanak').innerHTML = nakshra[a];
+  }
 
 
 /*
