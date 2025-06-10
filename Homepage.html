@@ -23,6 +23,52 @@
     <button class="tablinks" onclick="opentab(event, 'kuligal')"><img class="imgicon" src="vastu icon.jpg" ><label class="tab label">குழி கணிதம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'prasanam'), kadigaraprasanam()"><img class="imgicon" src="clock icon.png" ><label class="tab label">கடிகார பிராசனம்</label></button>
     <button class="tablinks" onclick="opentab(event, 'naligai'), naligai()"><img class="imgicon" src="clock icon.png" ><label class="tab label">நாழிகை கணிதம்</label></button>   
+     <button class="tablinks" onclick="opentab(event, 'Karma_Nakshatra'), karma_naKshatra()"><img class="imgicon" src="moon.jpg" ><label class="tab label">KN</label></button>
+  </div>
+
+  <div id="Karma_Nakshatra" class="tabcontent">
+    <table class="tablec">
+      <tr>
+        <td><label for="start_time" class="naligai_fsize"><b>ராகு ஸ்புடம்</b></label></td>
+        <td><select id="rasi1"class="thiyagium_naksatra"  >
+          <option  value="மேஷம்">மேஷம் </option>
+          <option  value="ரிஷபம்">ரிஷபம் </option>
+          <option  value="மிதுனம்">மிதுனம்</option>
+          <option  value="கடகம்">கடகம்</option>
+          <option  value="சிம்மம்">சிம்மம்</option>
+          <option  value="கன்னி">கன்னி </option>
+          <option  value="துலாம்"> துலாம்</option>
+          <option  value="விருச்சிகம்">விருச்சிகம் </option>
+          <option  value="தனுசு">தனுசு</option>  
+          <option  value="மகரம்">மகரம்</option> 
+          <option  value="கும்பம்">கும்பம்</option> 
+          <option  value="மீனம்">மீனம்</option>         
+        </td>
+        <td><input type="text" class="prasanam-time" id="ktext1"></td>
+      </tr>
+      <tr>
+        <td><label for="end_time" class="naligai_fsize"><b>சந்திரன் ஸ்புடம்</b></label></td>
+        <td><select id="rasi2"class="thiyagium_naksatra"  >
+          <option  value="மேஷம்">மேஷம் </option>
+          <option  value="ரிஷபம்">ரிஷபம் </option>
+          <option  value="மிதுனம்">மிதுனம்</option>
+          <option  value="கடகம்">கடகம்</option>
+          <option  value="சிம்மம்">சிம்மம்</option>
+          <option  value="கன்னி">கன்னி </option>
+          <option  value="துலாம்"> துலாம்</option>
+          <option  value="விருச்சிகம்">விருச்சிகம் </option>
+          <option  value="தனுசு">தனுசு</option>  
+          <option  value="மகரம்">மகரம்</option> 
+          <option  value="கும்பம்">கும்பம்</option> 
+          <option  value="மீனம்">மீனம்</option>         
+        </td>
+        <td><input type="text" class="prasanam-time" id="ktext2"></td>
+      </tr>
+    </table>
+    <div class="cont">
+      <button type="button" class="kkbut" onclick="karma_naKshatra()">Karma Nakshatra</button>
+      </div>
+    <p id="Karmanak">கர்ம நட்சத்திரம்: </p>    
   </div>
 
 
