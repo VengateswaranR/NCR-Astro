@@ -293,11 +293,13 @@ function karma_naKshatra(){
     karmanakshatra= (chandra_rasi_pos+(parseInt(chandraspudam[0])*60+parseInt(chandraspudam[1])))-(rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))
     if(karmanakshatra>0){
       a= parseInt(((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(karmanakshatra/2))/800);
+      padam= Math.ceil((((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(karmanakshatra/2))%800)/200);
     }
     else{
-      a=parseInt(((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(21600+karmanakshatra)/2)/800)
+      a=parseInt(((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(21600+karmanakshatra)/2)/800);
+     padam= Math.ceil((((rahu_rasi_pos+(parseInt(rahuspudam[0])*60+parseInt(rahuspudam[1])))+(karmanakshatra/2))%800)/200);
     }
-    document.getElementById('Karmanak').innerHTML = nakshra[a];
+    document.getElementById('Karmanak').innerHTML = nakshra[a]+"-"+padam;
   }
 
 
